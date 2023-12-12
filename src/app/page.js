@@ -63,9 +63,10 @@ export default function Home() {
         <p className="text-emerald-950">{joke}</p>
         <button onClick={() => getJoke()} className="rounded py-1 px-4 bg-emerald-700 text-emerald-100">Get new joke</button> {/* setValue(value + 1) */}
       </div>
-      <div className="p-6 bg-emerald-400 rounded flex flex-col gap-4 items-center">
+      error ? <p>Hov der gik noget galt</p> : (<div className="p-6 bg-emerald-400 rounded flex flex-col gap-4 items-center">
         <img src={response?.sprites?.front_default} />
-      </div>
+        <p>{response?.height}</p>
+      </div>)
     </main>
   )
 }
